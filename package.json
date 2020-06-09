@@ -1,0 +1,9 @@
+{
+  "name": "admin-fe",
+  "version": "1.0.0",
+  "description": "松鼠后台管理系统",
+  "main": "index.js",
+  "repository": "git@github.com:SongshuMall/admin-fe.git",
+  "author": "SongShuhang <java0120@qq.com>",
+  "license": "MIT"
+}
