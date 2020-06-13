@@ -2,7 +2,7 @@
 * @Author: SongShuhang
 * @Date:   2020-06-09 18:58:00
 * @Last Modified by:   SongShuhang
-* @Last Modified time: 2020-06-09 20:25:32
+* @Last Modified time: 2020-06-13 09:03:40
 */
 
 const path              = require('path');
@@ -16,6 +16,13 @@ module.exports = {
         path 		: path.resolve(__dirname, 'dist'),
         publicPath 	: '/dist/',
         filename 	: 'js/app.js'
+    },
+    resolve : {
+        alias : {
+        	page 		: path.resolve(__dirname, 'src/page'),
+        	util        : path.resolve(__dirname, 'src/util'),
+        	component 	: path.resolve(__dirname, 'src/component')
+        }
     },
     module: {
         rules: [
@@ -89,6 +96,9 @@ module.exports = {
         })
     ],
     devServer: {
-    	port:8088
+        port: 8086,
+        historyApiFallback: {
+            index: '/dist/index.html'
+        }
     }
 };
