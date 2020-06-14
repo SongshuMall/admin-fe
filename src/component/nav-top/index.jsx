@@ -2,15 +2,15 @@
 * @Author: SongShuhang
 * @Date:   2020-06-12 18:30:20
 * @Last Modified by:   SongShuhang
-* @Last Modified time: 2020-06-13 10:08:40
+* @Last Modified time: 2020-06-13 22:18:10
 */
 import React        from 'react';
 import { Link }     from 'react-router-dom';
 import MUtil        from 'util/mm.jsx'
-/*import User         from 'service/user-service.jsx'
+import User         from 'service/user-service.jsx'
 
-const _user = new User();*/
 const _mm   = new MUtil();
+const _user = new User();
 
 class NavTop extends React.Component{
     constructor(props){
@@ -21,12 +21,13 @@ class NavTop extends React.Component{
     }
     // 退出登录
    onLogout(){
-/*        _user.logout().then(res => {
+        _user.logout().then(res => {
+            //移除本地存储的userInfo
             _mm.removeStorage('userInfo');
             window.location.href = '/login';
         }, errMsg => {
             _mm.errorTips(errMsg);
-        });*/
+        });
     }
     render(){
         return (

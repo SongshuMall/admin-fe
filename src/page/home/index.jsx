@@ -2,20 +2,20 @@
 * @Author: SongShuhang
 * @Date:   2020-06-12 18:37:58
 * @Last Modified by:   SongShuhang
-* @Last Modified time: 2020-06-13 08:16:43
+* @Last Modified time: 2020-06-14 15:32:12
 */
 
 import React        from 'react';
 import { Link }     from 'react-router-dom';
 
-import MUtil        from 'util/mm.jsx'
-/*import Statistic    from 'service/statistic-service.jsx'
-
-const _mm           = new MUtil();
-const _statistic    = new Statistic();*/
+import MUtil        from 'util/mm.jsx';
+import Statistic    from 'service/statistic-service.jsx';
 
 import PageTitle    from 'component/page-title/index.jsx';
-import './index.scss'
+import './index.scss';
+
+const _mm           = new MUtil();
+const _statistic    = new Statistic();
 
 class Home extends React.Component{
     constructor(props){
@@ -27,15 +27,15 @@ class Home extends React.Component{
         }
     }
     componentDidMount(){
-        //this.loadCount();
+        this.loadCount();
     }
-/*    loadCount(){
+    loadCount(){
         _statistic.getHomeCount().then(res => {
             this.setState(res);
         }, errMsg => {
             _mm.errorTips(errMsg);
         });
-    }*/
+    }
     render(){
         return (
             <div id="page-wrapper">
