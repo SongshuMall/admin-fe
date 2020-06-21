@@ -2,7 +2,7 @@
 * @Author: SongShuhang
 * @Date:   2020-06-13 21:17:51
 * @Last Modified by:   SongShuhang
-* @Last Modified time: 2020-06-14 15:58:35
+* @Last Modified time: 2020-06-14 17:40:30
 */
 import MUtil        from 'util/mm.jsx'
 
@@ -53,7 +53,7 @@ class User{
             type    : 'post',
             url     : '/manage/user/list.do',
             data    : {
-                pageNum : pageNum
+                pageNum : pageNum,
             }
         });
     }
