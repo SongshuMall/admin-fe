@@ -2,7 +2,7 @@
 * @Author: SongShuhang
 * @Date:   2020-06-09 18:59:02
 * @Last Modified by:   SongShuhang
-* @Last Modified time: 2020-06-17 21:02:34
+* @Last Modified time: 2020-06-22 11:31:31
 */
 
 import React 		     from 'react';
@@ -25,7 +25,7 @@ class App extends React.Component{
                 <Switch>
                     <Route exact path="/" component={Home}/>
                     <Route path="/product" component={ProductRouter}/>
-                    <Route path="/product-category" component={Home}/>
+                    <Route path="/product-category" component={ProductRouter}/>
                     <Route path="/order/index" component={Home}/>
                     <Route path="/order/detail/:orderNumber" component={Home}/>
                     <Route path="/user/index" component={UserList}/>
