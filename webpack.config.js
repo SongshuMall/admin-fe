@@ -2,7 +2,7 @@
 * @Author: SongShuhang
 * @Date:   2020-06-09 18:58:00
 * @Last Modified by:   SongShuhang
-* @Last Modified time: 2020-06-22 15:56:19
+* @Last Modified time: 2020-06-22 16:19:17
 */
 
 const path              = require('path');
@@ -10,12 +10,15 @@ const webpack 			= require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
+let WEBPACK_ENV = process.env.WEBPACK_ENV || 'dev';
+
 module.exports = {
     entry: './src/app.jsx',
     output: {
-        path 		: path.resolve(__dirname, 'dist'),
-        publicPath 	: '/dist/',
-        filename 	: 'js/app.js'
+        path: path.resolve(__dirname, 'dist'),
+        publicPath: WEBPACK_ENV === 'dev' 
+            ? '/dist/' : '//s.guangping.store/admin-fe/dist/',
+        filename: 'js/app.js'
     },
     resolve : {
         alias : {
