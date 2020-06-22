@@ -1,4 +1,8 @@
 .DS_Store
 node_modules
 *.log
+<<<<<<< HEAD
 书航老帅了
+=======
+书航老帅了
+>>>>>>> refs/remotes/origin/master
