@@ -2,7 +2,7 @@
 * @Author: SongShuhang
 * @Date:   2020-06-09 18:58:00
 * @Last Modified by:   SongShuhang
-* @Last Modified time: 2020-06-21 22:49:04
+* @Last Modified time: 2020-06-22 15:56:19
 */
 
 const path              = require('path');
@@ -102,23 +102,23 @@ module.exports = {
             index: '/dist/index.html'
         },
         proxy : {
-            '/manage' : {
-                target: 'http://admintest.happymmall.com',
-                changeOrigin : true
-            },
-            '/user/logout.do' : {
-                target: 'http://admintest.happymmall.com',
-                changeOrigin : true
-            }
-
 /*            '/manage' : {
-                target: 'http://www.guangping.store',
+                target: 'http://admintest.happymmall.com',
                 changeOrigin : true
             },
             '/user/logout.do' : {
-                target: 'http://www.guangping.store',
+                target: 'http://admintest.happymmall.com',
                 changeOrigin : true
             }*/
+
+            '/manage' : {
+                target: 'http://www.guangping.store',
+                changeOrigin : true
+            },
+            '/user/logout.do' : {
+                target: 'http://www.guangping.store',
+                changeOrigin : true
+            }
         }        
     }
 };
