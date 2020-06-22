@@ -2,7 +2,7 @@
 * @Author: SongShuhang
 * @Date:   2020-06-22 09:09:36
 * @Last Modified by:   SongShuhang
-* @Last Modified time: 2020-06-22 11:30:44
+* @Last Modified time: 2020-06-22 17:50:11
 */
 import React        from 'react';
 import { Link }     from 'react-router-dom';
@@ -11,6 +11,8 @@ import Product      from 'service/product-service.jsx'
 
 import PageTitle    from 'component/page-title/index.jsx';
 import TableList    from 'util/table-list/index.jsx';
+
+import  './index.scss';
 
 const _mm           = new MUtil();
 const _product      = new Product();
@@ -73,7 +75,7 @@ class CategoryList extends React.Component{
                     <td>{category.id}</td>
                     <td>{category.name}</td>
                     <td>
-                        <a className="opear"
+                        <a className="opear" 
                             onClick={(e) => this.onUpdateName(category.id, category.name)}>修改名称</a>
                         {
                             category.parentId === 0
